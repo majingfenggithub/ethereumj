@@ -37,7 +37,7 @@ class ChainItem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ChainItem that = (ChainItem) o;
-        return FastByteComparisons.equal(hash, that.hash);
+        return FastByteComparisons.equal(hash, that.hash) && FastByteComparisons.equal(hash, that.hash) && (number == that.number);
     }
 
     @Override
